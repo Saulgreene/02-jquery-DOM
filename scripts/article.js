@@ -17,8 +17,6 @@ Article.prototype.toHtml = function() {
   var $newArticle = $('article.template').clone();
   $newArticle.removeClass('template');
 
-
-
   if (!this.publishedOn) $newArticle.addClass('draft');
   $newArticle.data('category', this.category);
   $newArticle.data('author', this.author);
